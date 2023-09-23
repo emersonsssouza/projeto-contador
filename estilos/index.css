@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+
+    background-image: url(/imagens/back.jpg);
+    background-position: center;
+   background-size: cover;
+   width: 100vw;
+   height: 100vh;
+}
+
+div.countdown h1 {
+    text-align: center;
+    color: black;
+}
+
+div.conteudo-countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+input#targetDate {
+   padding: 5px;
+   font-size: 17px;
+   background-color: black;
+   color: whitesmoke;
+   text-align: center;
+   width: auto;
+}
+
+label {
+    padding: 10px;
+    color: white;
+    font-size: 27px;
+}
+
+button {
+    width: auto;
+    margin: 10px auto;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+p#countdown {
+    color: whitesmoke;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+@media screen and (orientation: landscape) {
+    *{
+        margin: auto;
+    }
+
+    body {
+        background-image: url(/imagens/background.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      div.countdown h1{  
+        color: black;
+        font-size: 40px;
+        font-weight: bold;
+        padding: 10px;
+       } 
+
+       input#targetDate {
+        padding: 20px;
+        font-size: 27px;
+     }
+
+     button {
+        font-size: 32px;
+        color: whitesmoke;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.56);
+        cursor: pointer;
+     }
+
+     p#countdown {
+        padding: 10px;
+        font-size: 37px;
+     }
+}
