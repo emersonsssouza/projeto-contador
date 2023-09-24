@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="estilos/index.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Aniversario</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contagem regressiva</title>
 </head>
+<body>
+    
+</body>
+</html>
 <body>
     <div class="countdown">
         <h1>Contagem regressiva!</h1>
@@ -45,7 +50,7 @@
                 const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
                 
-                countdownElement.innerHTML = `${nome} tenha calma! faltam: ${days}d ${hours}h ${minutes}m ${seconds}s para seu aniversario`;
+                countdownElement.innerHTML = `${nome} tenha calma! faltam: ${days}d ${hours}h ${minutes}m ${seconds}s para esta data`;
             } else {
                 clearInterval(countdownInterval);
                 countdownElement.innerHTML = "Insira os dados corretamente por favor!!";
