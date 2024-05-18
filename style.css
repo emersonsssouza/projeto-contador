@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-*{
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url(back.jpg);
+    background-image: linear-gradient(to bottom, red, blue, black);
     background-position: center;
     background-size: cover;
     width: 100vw;
@@ -20,7 +20,7 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     padding: 10px;
     width: 500px;
     height: 500px;
@@ -40,14 +40,14 @@ body {
 }
 
 input#targetDate {
-   padding: 5px;
-   font-size: 17px;
-   color: whitesmoke;
-   background-color: rgba(0, 0, 0, 0.596);
-   text-align: center;
-   width: 100%;
-   border: none;
-   margin: 10px 0px;
+    padding: 5px;
+    font-size: 17px;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.596);
+    text-align: center;
+    width: 100%;
+    border: none;
+    margin: 10px 0px;
 }
 
 .conteudo-principal {

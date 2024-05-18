@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/birthday.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Contagem regressiva</title>
+    <title>Contagem</title>
 </head>
-<body>
-    
-</body>
+
 </html>
+
 <body>
     <div class="countdown">
-            <div class="conteudo-principal">
-                <h1>Contagem regressiva!</h1>
-                <div class="conteudo-countdown">
-                    <label for="targetDate"></label>
-                    <input type="datetime-local" id="targetDate"/>
-                </div>
-                <button id="iniciar" onclick="startCountdown()">Iniciar Contagem</button>
-                <p id="countdown"></p>
+        <div class="conteudo-principal">
+            <h1>Contagem regressiva!</h1>
+            <div class="conteudo-countdown">
+                <label for="targetDate"></label>
+                <input type="datetime-local" id="targetDate" />
             </div>
+            <button id="iniciar" onclick="startCountdown()">Iniciar Contagem</button>
+            <p id="countdown"></p>
+        </div>
     </div>
-    
+
     <script>
-         const nome = window.prompt('Olá, Qual o seu nome por favor?')
-            console.log(nome)
+        const nome = window.prompt('Olá, Qual o seu nome por favor?')
+        console.log(nome)
 
         let countdownInterval;
 
         function startCountdown() {
-           
+
             const targetDateInput = document.getElementById("targetDate");
             const targetDate = new Date(targetDateInput.value);
             const countdownElement = document.getElementById("countdown");
-            
+
             clearInterval(countdownInterval);
             updateCountdown(targetDate, countdownElement); // Atualizar inicialmente
             countdownInterval = setInterval(() => updateCountdown(targetDate, countdownElement), 1000); // Atualizar a cada segundo
@@ -43,13 +44,13 @@
         function updateCountdown(targetDate, countdownElement) {
             const currentDate = new Date();
             const timeDifference = targetDate - currentDate;
-            
+
             if (timeDifference > 0) {
                 const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-                
+
                 countdownElement.innerHTML = `${nome} tenha calma! faltam: ${days}d ${hours}h ${minutes}m ${seconds}s para esta data`;
             } else {
                 clearInterval(countdownInterval);
@@ -58,4 +59,5 @@
         }
     </script>
 </body>
+
 </html>
